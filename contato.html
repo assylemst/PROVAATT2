@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<title data-pt="Contato" data-en="Contact">Contato</title>
+<link rel="stylesheet" href="contato.css">
+<style>
+  :root {
+    --primary-color: #0057b8;
+    --bg-color: white;
+    --text-color: black;
+    --input-bg: #f0f4ff;
+    --input-border: #0057b8;
+    --button-bg: #0057b8;
+    --button-hover-bg: #004494;
+    --button-text: white;
+  }
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: white;
+    --input-bg: #1c1c1c;
+    --input-border: #3399ff;
+    --button-bg: #3399ff;
+    --button-hover-bg: #267acc;
+    --button-text: #121212;
+  }
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav a {
+    margin: 0 12px;
+    padding: 8px 18px;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  button#btn-theme, button#btn-lang {
+    margin: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  button#btn-theme:hover, button#btn-lang:hover {
+    background-color: var(--button-hover-bg);
+  }
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    background-color: var(--input-bg);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  button[type="submit"] {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color: var(--button-hover-bg);
+  }
+  .contact-info {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .contact-info p {
+    margin: 10px 0;
+  }
+  .contact-info strong {
+    color: var(--primary-color);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" data-pt="Home" data-en="Home">Home</a>
+    <a href="contato.html" data-pt="Contato" data-en="Contact">Contato</a>
+  </nav>
+  <button id="btn-theme">🌗 Tema</button>
+  <button id="btn-lang">🌐 Idioma</button>
+</header>
+
+<h1 data-pt="Fale Conosco" data-en="Contact Us">Fale Conosco</h1>
+
+<form id="contact-form">
+  <label for="name" data-pt="Nome" data-en="Name">Nome</label>
+  <input type="text" id="name" name="name" required placeholder="Seu nome">
+
+  <label for="email" data-pt="Email" data-en="Email">Email</label>
+  <input type="email" id="email" name="email" required placeholder="seu@email.com">
+
+  <label for="phone" data-pt="Telefone" data-en="Phone">Telefone</label>
+  <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999">
+
+  <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
+  <textarea id="message" name="message" required placeholder="Escreva sua mensagem aqui..."></textarea>
+
+  <button type="submit" data-pt="Enviar" data-en="Send">Enviar</button>
+</form>
+
+<div class="contact-info">
+  <p><strong data-pt="Telefone:" data-en="Phone:">(011) 2181-7312</strong></p>
+   <p><strong data-pt="endereço:" data-en="address:">av. senador teotônio vilela , 4482 - vila sao jose - sao paulo/SP - CEP: 04864-001</strong></p>
+  <p data-pt="Siga-nos nas redes sociais!" data-en="Follow us on social media!"></p>
+  <p>
+    <a href="https://facebook.com/larnocao" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration:none; font-weight:bold;">Facebook</a> |
+    <a href="https://instagram.com/larnocao" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration:none; font-weight:bold;">Instagram</a> |
+    <a href="https://twitter.com/larnocao" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration:none; font-weight:bold;">Twitter</a>
+  </p>
+</div>
+
+<script>
+  const btnTheme = document.getElementById('btn-theme');
+  const btnLang = document.getElementById('btn-lang');
+
+  btnTheme.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+  });
+
+  btnLang.addEventListener('click', () => {
+    const elements = document.querySelectorAll('[data-pt][data-en]');
+    elements.forEach(el => {
+      if(el.innerText === el.getAttribute('data-pt')){
+        el.innerText = el.getAttribute('data-en');
+      } else {
+        el.innerText = el.getAttribute('data-pt');
+      }
+    });
+  });
+
+  // Optional: basic form submit handler to prevent reload and alert success
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Mensagem enviada! / Message sent!');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

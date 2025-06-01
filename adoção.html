@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<title data-pt="Adoção" data-en="Adoption">Adoção</title>
+<link rel="stylesheet" href="adoção.css">
+<style>
+  :root {
+    --bg-color: white;
+    --text-color: black;
+  }
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: white;
+  }
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  nav a {
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .dogs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .dog-card {
+    background-color: var(--bg-color);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  .dog-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .dog-card:hover img {
+    transform: scale(1.05);
+  }
+  .dog-info {
+    margin-top: 10px;
+  }
+  .dog-info p {
+    margin: 4px 0;
+  }
+  .senior {
+    border: 2px solid gold;
+    background-color: #fff8dc;
+  }
+  .banner-senior {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    font-size: 1.2em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" data-pt="Home" data-en="Home">Home</a>
+    <a href="adocao.html" data-pt="Adoção" data-en="Adoption">Adoção</a>
+    <a href="contato.html" data-pt="Contato" data-en="Contact">Contato</a>
+  </nav>
+  <button id="btn-theme">🌗 Tema</button>
+  <button id="btn-lang">🌐 Idioma</button>
+</header>
+
+<h1 data-pt="Cachorros para adoção" data-en="Dogs for Adoption">Cachorros para adoção</h1>
+
+<div class="dogs-container">
+  <div class="dog-card">
+    <img src="./Captura de tela 2025-05-31 224713.png" alt="Dog 1" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Alan</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 6 meses </p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> dócil e alegre </p>
+    </div>
+  </div>
+
+  <div class="dog-card">
+    <img src="./Captura de tela 2025-05-31 224843.png" alt="Dog 2" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Baio </p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 1 ano</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> calmo e carinhoso</p>
+    </div>
+  </div>
+
+  <div class="dog-card">
+    <img src="./Captura de tela 2025-05-31 224946.png" alt="Dog 3" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Billy</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 2 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> Muito carinhoso e sociável com outros animais.</p>
+    </div>
+  </div>
+</div>
+
+<div class="banner-senior" data-pt="Adote um Idosinho " data-en="Adopt a Senior Dog ">
+  Adote um Idosinho 
+</div>
+
+<h2 data-pt="Cachorros idosos" data-en="Senior Dogs">Cachorros idosos</h2>
+
+<div class="dogs-container">
+  <div class="dog-card senior">
+    <img src="./Captura de tela 2025-05-31 225328.png" alt="Dog Idoso 1" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Joana</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 7 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> Dócil, amorosa e sociável.</p>
+      <button>🐾 Quero Adotar</button>
+    </div>
+  </div>
+
+  <div class="dog-card senior">
+    <img src="./Captura de tela 2025-05-31 232536.png" alt="Dog Idoso 2" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Jesuino</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 5 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> calmo e protetor.</p>
+      <button>🐾 Quero Adotar</button>
+    </div>
+  </div>
+
+  <div class="dog-card senior">
+    <img src="./Captura de tela 2025-05-31 233533.png" alt="Dog Idoso 3" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Soneca</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 5 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> muito carinhoso, dorminhoco e tranquilo.</p>
+      <button>🐾 Quero Adotar</button>
+    </div>
+  </div>
+
+  <div class="dog-card senior">
+    <img src="./Captura de tela 2025-05-31 234108.png" alt="Dog Idoso 4" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Panqueca</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 4 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> brincalhão e carinhoso.</p>
+      <button>🐾 Quero Adotar</button>
+    </div>
+  </div>
+
+  <div class="dog-card senior">
+    <img src="./Captura de tela 2025-05-31 235205.png" alt="Dog Idoso 5" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Junior</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 5 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> Lindo cãozinho sociável e amoroso.</p>
+      <button>🐾 Quero Adotar</button>
+    </div>
+  </div>
+
+  <div class="dog-card senior">
+    <img src="./Captura de tela 2025-05-31 234224.png" alt="Dog Idoso 6" />
+    <div class="dog-info">
+      <p><strong data-pt="Nome:" data-en="Name:">Nome:</strong> Otelo</p>
+      <p><strong data-pt="Idade:" data-en="Age:">Idade:</strong> 4 anos</p>
+      <p><strong data-pt="Personalidade:" data-en="Personality:">Personalidade:</strong> Otelo foi resgatado de maus tratos, quieto e amoroso.</p>
+      <button>🐾 Quero Adotar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const btnTheme = document.getElementById('btn-theme');
+  const btnLang = document.getElementById('btn-lang');
+
+  btnTheme.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+  });
+
+  btnLang.addEventListener('click', () => {
+    const elements = document.querySelectorAll('[data-pt][data-en]');
+    elements.forEach(el => {
+      if (el.innerText === el.getAttribute('data-pt')) {
+        el.innerText = el.getAttribute('data-en');
+      } else {
+        el.innerText = el.getAttribute('data-pt');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

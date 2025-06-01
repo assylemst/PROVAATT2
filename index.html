@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<title data-pt="Home" data-en="Home">Home</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --bg-color: white;
+    --text-color: black;
+  }
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: white;
+  }
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  nav a {
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="site-name">Casa Nova</h1>
+  <nav>
+    <a href="index.html" data-pt="Home" data-en="Home">Home</a>
+    <a href="adoção.html" data-pt="Adoção" data-en="Adoption">Adoção</a>
+    <a href="contato.html" data-pt="Contato" data-en="Contact">Contato</a>
+  </nav>
+  <button id="btn-theme">🌗 Tema</button>
+  <button id="btn-lang">🌐 Idioma</button>
+</header>
+<main>
+<h1 data-pt="Bem-vindo à nossa ONG" data-en="Welcome to our NGO">Bem-vindo à nossa ONG</h1>
+
+<section>
+  <h2 data-pt="Sobre a ONG" data-en="About the NGO">Sobre a ONG</h2>
+  <p data-pt="A Casa Nova nasceu com a missão de transformar a realidade de animais que sofreram com o abandono. Nosso objetivo é proporcionar a esses serzinhos indefesos a chance de recomeçar, cercados de amor, cuidado e segurança. Acreditamos que todo animal merece um lar acolhedor, uma família que os ame de verdade e uma vida digna, longe do medo e do sofrimento. Por isso, trabalhamos incansavelmente para conectar esses animais a lares responsáveis e cheios de afeto, onde eles possam finalmente ser felizes" data-en="Casa Nova was created with the mission of transforming the lives of animals who have suffered from abandonment. Our goal is to give these little beings a second chance — surrounded by love, care, and safety. We believe that every animal deserves a warm home, a family that truly loves them, and a dignified life, free from fear and suffering. That’s why we work tirelessly to connect these animals with responsible, loving homes where they can finally be happy.">
+    A Casa Nova nasceu com a missão de transformar a realidade de animais que sofreram com o abandono. Nosso objetivo é proporcionar a esses serzinhos indefesos a chance de recomeçar, cercados de amor, cuidado e segurança. Acreditamos que todo animal merece um lar acolhedor, uma família que os ame de verdade e uma vida digna, longe do medo e do sofrimento. Por isso, trabalhamos incansavelmente para conectar esses animais a lares responsáveis e cheios de afeto, onde eles possam finalmente ser felizes
+  </p>
+</section>
+
+<section>
+  <h2 data-pt="Parcerias" data-en="Partnerships">Parcerias</h2>
+  <p data-pt="Por ainda sermos uma ONG de pequeno porte, contamos com o apoio de clínicas veterinárias e pet shops locais para oferecer os cuidados necessários aos nossos animais resgatados. Essas parcerias são fundamentais para garantir o bem-estar dos nossos bichinhos, desde os primeiros socorros até a preparação para a adoção. Nosso sonho é crescer cada vez mais, com o apoio de novos parceiros e colaboradores, para melhorar ainda mais a qualidade de vida dos nossos animais e alcançar um número maior de vidas transformadas" data-en="As a small nonprofit organization, we currently rely on the support of local veterinary clinics and pet shops to provide the necessary care for our rescued animals. These partnerships are essential in ensuring their well-being—from initial medical treatment to preparing them for adoption. Our hope is to grow and form new partnerships so we can continue to improve the quality of life for our animals and reach even more lives in need.">
+    Por ainda sermos uma ONG de pequeno porte, contamos com o apoio de clínicas veterinárias e pet shops locais para oferecer os cuidados necessários aos nossos animais resgatados. Essas parcerias são fundamentais para garantir o bem-estar dos nossos bichinhos, desde os primeiros socorros até a preparação para a adoção. Nosso sonho é crescer cada vez mais, com o apoio de novos parceiros e colaboradores, para melhorar ainda mais a qualidade de vida dos nossos animais e alcançar um número maior de vidas transformadas
+  </p>
+</section>
+</main>
+
+<script>
+  const btnTheme = document.getElementById('btn-theme');
+  const btnLang = document.getElementById('btn-lang');
+
+  btnTheme.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+  });
+
+  btnLang.addEventListener('click', () => {
+    const elements = document.querySelectorAll('[data-pt][data-en]');
+    elements.forEach(el => {
+      if (el.innerText === el.getAttribute('data-pt')) {
+        el.innerText = el.getAttribute('data-en');
+      } else {
+        el.innerText = el.getAttribute('data-pt');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: #0d47a1; /* azul forte */
+  --card-bg: #f5f5f5;
+  --card-border: #0d47a1;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 8px 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: no
+}
